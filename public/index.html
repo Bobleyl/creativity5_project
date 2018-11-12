@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Comments!</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="javascripts/comments.js"></script>
+</head>
+
+<body>
+<div id="mainBox">
+<form id="commentForm" action="">
+<label for="name">Name: </label><input type="text" id="name" placeholder="Name"><br><br>
+<label for="comment">Comment: </label><input type="text" id="comment" placeholder="Comment"><br><br>
+</form>
+
+<button id="postComment">Post Comment</button>
+<button id="deleteComments">Delete All</button>
+<br><br>
+<label for="name">Get Comment By Name: </label><input type="text" id="query" placeholder="Insert Name"><br>
+<br>
+<button id="getComments">Get Comments</button><br>
+<div id="json"></div>
+<div id="done"></div>
+<div id="comments"></div>
+</div>
+<style>
+  body{
+    text-align: center;
+    background-image: url("/bg.jpg");
+    background-size: cover;
+    color: black;
+    font-size: 24px;
+    font-family: Helvetica;
+  }
+  #mainBox{
+    background-color: rgba(255,255,255,.9);
+    border:1px solid black;
+    padding: 20px;
+    border-radius: 25px;
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+</style>
+</body>
+</html>
