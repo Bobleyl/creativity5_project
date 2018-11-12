@@ -30,14 +30,6 @@ router.post('/comment', function(req, res, next) {
 });
 
 router.get('/comment', function(req, res, next) {
-  //console.log("In the GET route?");
-  //Comment.find(function(err,commentList) {
-    //if (err) return console.error(err);
-    //else {
-      //console.log(commentList);
-      //res.json(commentList);
-    //}
-  //})
   console.log("In query route");
   console.log(req.body);
   console.log("Request");
