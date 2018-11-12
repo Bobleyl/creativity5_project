@@ -7,7 +7,7 @@ var Lab5 = function() {
   //Comments Form:
   self.name = $('#name'); //The first input field for the name
   self.comment = $('#comment'); //The second input field for their comment
-  self.pay = $('#pay');
+  self.pay = $('#pay'); //The third input field for their pay
 
   //Buttons:
   self.post = $('#postComment'); //Text can be anything, but this ID is for the button that will send the comment to the server

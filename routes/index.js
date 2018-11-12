@@ -7,7 +7,7 @@ mongoose.connect('mongodb://localhost/commentDB',{ useNewUrlParser: true }); //C
 var commentSchema = mongoose.Schema({ //Defines the Schema for this database
     Name: String,
     Comment: String,
-    Pay: Number
+    Pay: String
 });
 
 var Comment = mongoose.model('Comment', commentSchema); //Makes an object from that schema as a model

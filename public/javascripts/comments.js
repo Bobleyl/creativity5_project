@@ -21,7 +21,7 @@ $(document).ready(function(){
       var everything = "<ul>";
       for(var comment in data) {
         com = data[comment];
-        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + " -- Hourly Rate: " + com.Pay +"</li>";
+        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + " -- Pay: " + com.Pay +"</li>";
       }
       everything += "</ul>";
       $("#comments").html(everything);
