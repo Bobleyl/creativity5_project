@@ -7,14 +7,19 @@
 </head>
 
 <body>
+  <br>
 <div id="mainBox">
   <form id="commentForm" action="">
     <label for="name">Name: </label><input type="text" id="name" placeholder="Name"><br><br>
     <label for="comment">Courses Taught: </label><input type="text" id="comment" placeholder="Comment"><br><br>
     <label for="pay">Hourly Rate: </label><input type="text" id="pay" placeholder="Pay"><br><br>
   </form>
-  
   <button id="postComment">Post Ad</button>
+  <div id="json"></div>
+  <div id="done"></div>
+</div>
+  <br>
+<div id="secondaryBox">
   <br><br>
   <label for="name">Get Tutors By Name: </label><input type="text" id="query" placeholder="Insert Name"><button id="getComments">Search</button><br><br>
   <br>
@@ -22,21 +27,28 @@
   <br>
   <button id="deleteComments">Delete All</button>
   <button id="getAll">Get All</button><br>
-  
-  <div id="json"></div>
-  <div id="done"></div>
+
   <div id="comments"></div>
 </div>
 <style>
   body{
     text-align: center;
     color: black;
-    background-color: rgba(65,105,225);
-    font-size: 24px;
-    font-family: Helvetica;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    font-size: 26px;
+    font-family: Calibri;
   }
   #mainBox{
-    background-color: rgba(211,211,211,.9);
+    background-color: rgba(211,211,211,.5);
+    border:1px solid black;
+    padding: 20px;
+    border-radius: 25px;
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+  #secondaryBox{
+    background-color: rgba(211,211,211,.5);
     border:1px solid black;
     padding: 20px;
     border-radius: 25px;
