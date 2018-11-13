@@ -28,6 +28,32 @@ $(document).ready(function(){
       $("#comments").html(everything);
     })
   });
+  $("#getRates").click(function() {
+    var URL = "rate?q="+$("#payquery").val();
+    $.getJSON(URL, function(data) {
+      console.log(data);
+      var everything = "<ul>";
+      for(var comment in data) {
+        com = data[comment];
+        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + " -- Pay: " + com.Pay +"</li>";
+      }
+      everything += "</ul>";
+      $("#comments").html(everything);
+    })
+  });
+  $("#getAll").click(function() {
+    var URL = "comment?q="+$("#query").val();
+    $.getJSON(URL, function(data) {
+      console.log(data);
+      var everything = "<ul>";
+      for(var comment in data) {
+        com = data[comment];
+        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + " -- Pay: " + com.Pay +"</li>";
+      }
+      everything += "</ul>";
+      $("#comments").html(everything);
+    })
+  });
   $("#deleteComments").click(function(){
       $.ajax({
         url: "delete",

@@ -52,6 +52,28 @@ router.get('/comment', function(req, res, next) {
   }
 });
 
+router.get('/rate', function(req, res, next) {
+  console.log("In query route");
+  console.log(req.body);
+  console.log("Rate Function");
+  var requestrate = req.query["q"];
+  console.log(requestrate);
+  console.log("flag");
+  var obj = {};
+  if(requestrate){
+    obj = { Pay:requestrate };
+    Comment.find(obj, function(err, list) {
+      console.log(list);
+      res.json(list);
+    })
+  } else{
+    Comment.find({}, function(err, list) {
+      console.log(list);
+      res.json(list);
+    })
+  }
+});
+
 router.delete('/delete', function(req, res, next) {
   console.log("deleted comments");
   Comment.deleteMany({}, function(err){
