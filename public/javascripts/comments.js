@@ -34,7 +34,7 @@ $(document).ready(function(){
         success: function(data,textStatus) {
             $("#done").html(textStatus);
             $("#json").text("");
-
+            $("#comments").text("");
         }
       })
   });
