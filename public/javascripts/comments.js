@@ -1,6 +1,7 @@
+/*global $*/
 $(document).ready(function(){
   $("#postComment").click(function(){
-      var myobj = {Name:$("#name").val(),Comment:$("#comment").val()};
+      var myobj = {Name:$("#name").val(),Comment:$("#comment").val(),Pay:$("#pay").val()};
       jobj = JSON.stringify(myobj);
       $("#json").text(jobj);
       var url = "comment";
