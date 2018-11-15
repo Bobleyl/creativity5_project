@@ -1,7 +1,7 @@
 /*global $*/
 $(document).ready(function(){
   $("#postComment").click(function(){
-      var myobj = {Name:$("#name").val(),Comment:$("#comment").val(),Pay:$("#pay").val()};
+      var myobj = {Name:$("#name").val(),Class:$("#comment").val(),Pay:$("#pay").val()};
       jobj = JSON.stringify(myobj);
       $("#json").text(jobj);
       var url = "comment";
@@ -22,7 +22,7 @@ $(document).ready(function(){
       var everything = "<ul>";
       for(var comment in data) {
         com = data[comment];
-        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + " -- Pay: " + com.Pay +"</li>";
+        everything += "<li> Name: " + com.Name + " -- Course: " + com.Class + " -- Pay: " + com.Pay +" an hour</li>";
       }
       everything += "</ul>";
       $("#comments").html(everything);
@@ -35,7 +35,7 @@ $(document).ready(function(){
       var everything = "<ul>";
       for(var comment in data) {
         com = data[comment];
-        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + " -- Pay: " + com.Pay +"</li>";
+        everything += "<li> Name: " + com.Name + " -- Course: " + com.Class + " -- Pay: " + com.Pay +" an hour</li>";
       }
       everything += "</ul>";
       $("#comments").html(everything);
@@ -48,7 +48,7 @@ $(document).ready(function(){
       var everything = "<ul>";
       for(var comment in data) {
         com = data[comment];
-        everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + " -- Pay: " + com.Pay +"</li>";
+        everything += "<li> Name: " + com.Name + " -- Course: " + com.Class + " -- Pay: " + com.Pay +" an hour</li>";
       }
       everything += "</ul>";
       $("#comments").html(everything);

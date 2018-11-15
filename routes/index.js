@@ -6,7 +6,7 @@ mongoose.connect('mongodb://localhost/commentDB',{ useNewUrlParser: true }); //C
 
 var commentSchema = mongoose.Schema({ //Defines the Schema for this database
     Name: String,
-    Comment: String,
+    Class: String,
     Pay: String
 });
 
